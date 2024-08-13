@@ -31,7 +31,7 @@ const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 const DATABASE_URL =
   process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
 
-const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+// const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
 const plugins = [
   `medusa-fulfillment-manual`,
@@ -85,21 +85,36 @@ const plugins = [
       },
     },
   },
+//   {
+//     resolve: "medusa-plugin-printful",
+//     options: {
+//         printfulAccessToken: process.env.PRINTFUL_ACCESS_TOKEN, 
+//         storeId: process.env.PRINTFUL_STORE_ID, 
+//         backendUrl: process.env.BACKEND_URL, 
+//         enableWebhooks: true, 
+//         enableSync: true,
+//         batchSize: 3,
+//         productTags: true,
+//         productCategories: true,
+//         redisURL: REDIS_URL,
+//         confirmOrder: false,
+//     }
+// }
 ];
 
 const modules = {
-  /*eventBus: {
-    resolve: "@medusajs/event-bus-redis",
-    options: {
-      redisUrl: REDIS_URL
-    }
-  },
-  cacheService: {
-    resolve: "@medusajs/cache-redis",
-    options: {
-      redisUrl: REDIS_URL
-    }
-  },*/
+  // eventBus: {
+  //   resolve: "@medusajs/event-bus-redis",
+  //   options: {
+  //     redisUrl: REDIS_URL
+  //   }
+  // },
+  // cacheService: {
+  //   resolve: "@medusajs/cache-redis",
+  //   options: {
+  //     redisUrl: REDIS_URL
+  //   }
+  // },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
